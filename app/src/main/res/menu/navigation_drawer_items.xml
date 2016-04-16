@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@drawable/menu_home_sel"
+            android:title="@string/menu_home_str"/>
+        <item
+            android:id="@+id/menu_zice"
+            android:icon="@drawable/menu_zice"
+            android:title="@string/menu_zice_str" />
+
+        <item
+            android:id="@+id/menu_store"
+            android:icon="@drawable/menu_store"
+            android:title="@string/menu_store_str"/>
+
+        <item
+            android:id="@+id/menu_footprint"
+            android:icon="@drawable/menu_store"
+            android:title="@string/menu_footprint_str"/>
+    </group>
+
+</menu>
