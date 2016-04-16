@@ -2,7 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dong.huang.healthapp">
 
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".base.BaseApplication"
@@ -13,7 +28,10 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="56e6582be0f55a58fb000360"></meta-data>
+            android:value="56e6582be0f55a58fb000360" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="9964b67673a12bdf8cc564393e1c5f9d" />
 
         <activity
             android:name=".activity.MainActivity"
@@ -59,20 +77,25 @@
             android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
             android:configChanges="keyboardHidden|orientation"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
 
         <service
             android:name="com.sina.weibo.sdk.net.DownloadService"
-            android:exported="false"></service>
+            android:exported="false" />
 
-        <activity android:name=".activity.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- 计步器服务 -->
         <service
             android:name=".service.StepService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <!-- 定位服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
     </application>
 
 </manifest>

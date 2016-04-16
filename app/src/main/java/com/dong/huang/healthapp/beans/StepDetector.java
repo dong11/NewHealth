@@ -84,8 +84,6 @@ public class StepDetector implements SensorEventListener {
                 }
                 mLastDirections[k] = direction;
                 mLastValues[k] = v;
-
-                Log.i("123", "------>" + CURRENT_SETP);
             }
         }
     }

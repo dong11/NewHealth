@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'dong'
+            keyPassword 'huangdong'
+            storeFile file('/Users/dong/Desktop/秘钥/dong.jks')
+            storePassword 'huangdong'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
-
     defaultConfig {
         applicationId "com.dong.huang.healthapp"
         minSdkVersion 15
