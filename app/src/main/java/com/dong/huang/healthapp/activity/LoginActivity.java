@@ -37,7 +37,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     private SpringingTextView stv_regist = null;
     private SpringingTextView stv_login = null;
 
-    private boolean isContentShow = true;
     private Toolbar mToolbar;
 
     UMShareAPI mShareAPI;
@@ -108,8 +107,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
             }
             break;
             case R.id.stv_login: {
-                Toast.makeText(LoginActivity.this, "还未开放,敬请等待！", Toast.LENGTH_SHORT).show();
-//                login();
+//                Toast.makeText(LoginActivity.this, "还未开放,敬请等待！", Toast.LENGTH_SHORT).show();
+                login();
             }
             break;
             case R.id.simg_avatarMan: {

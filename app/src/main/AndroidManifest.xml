@@ -96,6 +96,8 @@
         <!-- 定位服务 -->
         <service android:name="com.amap.api.location.APSService" />
 
+        <activity android:name=".activity.SubjectActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

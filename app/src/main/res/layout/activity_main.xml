@@ -24,6 +24,7 @@
                 android:background="@color/color_title_bar"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
                 app:title="@string/menu_home_str"
+                app:titleTextColor="@android:color/white"
                 />
 
         </android.support.design.widget.AppBarLayout>

@@ -21,7 +21,6 @@ public class WebViewActivity extends BaseActivity {
     private String title;
     private int id;
     private String image;
-
     private TextView mTitle;
 
     @Override

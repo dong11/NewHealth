@@ -23,6 +23,7 @@ public class BaseApplication extends Application implements AMapLocationListener
 
     public static double lat;
     public static double lon;
+    public static String cityName;
 
     @Override
     public void onCreate() {
@@ -67,5 +68,6 @@ public class BaseApplication extends Application implements AMapLocationListener
     public void onLocationChanged(AMapLocation aMapLocation) {
         lat = aMapLocation.getLatitude();//获取纬度
         lon = aMapLocation.getLongitude();//获取经度
+        cityName = aMapLocation.getCity();//城市名
     }
 }

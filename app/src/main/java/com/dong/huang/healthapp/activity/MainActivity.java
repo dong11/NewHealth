@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity {
     private static final int MSG_EXIT_WAIT = 0x02;
     private static final int EXIT_DELAY_TIME = 2000;
 
-    private Handler handler = new Handler(){
+    private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what){
