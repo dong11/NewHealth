@@ -1,11 +1,13 @@
 package com.dong.huang.healthapp.component;
 
+import com.dong.huang.healthapp.beans.DrugsSortBean;
 import com.dong.huang.healthapp.beans.homebean.ContentInfo;
 import com.dong.huang.healthapp.beans.homebean.HotInfo;
 import com.dong.huang.healthapp.beans.homebean.NutritionInfo;
 import com.dong.huang.healthapp.beans.homebean.OneImageInfo;
 import com.dong.huang.healthapp.beans.homebean.SubjectInfo;
 import com.dong.huang.healthapp.beans.homebean.SubjectItemInfo;
+import com.dong.huang.healthapp.beans.homebean.TruthInfo;
 import com.dong.huang.healthapp.utils.URLConfig;
 
 import retrofit.http.GET;
@@ -41,4 +43,12 @@ public interface ApiInterface {
     //http://dxy.com/app/i/columns/article/list?page_index=2&mc=fffffffff0bdd078ffffffff99d603a9&items_per_page=10&channel_id=6
     @GET("http://dxy.com/app/i/columns/article/list")
     Observable<NutritionInfo> getNutritionInfo(@Query("page_index") String pageIndex, @Query("ac") String ac, @Query("items_per_page") String itemsPerPage, @Query("channel_id") String channelId);
+
+    //http://dxy.com/app/i/columns/truth/article/list?page_index=1&ac=d5424fa6-adff-4b0a-8917-4264daf4a348&items_per_page=10
+    @GET("http://dxy.com/app/i/columns/truth/article/list")
+    Observable<TruthInfo> getTruthInfo(@Query("page_index") String pageIndex, @Query("ac") String ac, @Query("items_per_page") String itemsPerPage);
+
+    @GET("http://dxy.com/app/i/feed/drug/list")
+    Observable<DrugsSortBean> getDrugsSortBean(@Query("ac") String ac);
+
 }

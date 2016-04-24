@@ -29,7 +29,6 @@ public class StepService extends Service {
                 startStepDetector();
             }
         }).start();
-
     }
 
     private void startStepDetector() {

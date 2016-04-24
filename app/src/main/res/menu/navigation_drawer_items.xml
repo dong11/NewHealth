@@ -11,7 +11,10 @@
             android:id="@+id/menu_zice"
             android:icon="@drawable/menu_zice"
             android:title="@string/menu_zice_str" />
-
+        <item
+            android:id="@+id/menu_drug"
+            android:icon="@drawable/menu_drugs"
+            android:title="@string/menu_drugs_str" />
         <item
             android:id="@+id/menu_store"
             android:icon="@drawable/menu_store"

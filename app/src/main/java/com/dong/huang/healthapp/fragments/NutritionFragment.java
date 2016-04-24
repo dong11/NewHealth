@@ -45,7 +45,6 @@ public class NutritionFragment extends Fragment {
 
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -60,7 +59,7 @@ public class NutritionFragment extends Fragment {
         loadMore();
     }
 
-    private void initView(View view){
+    private void initView(View view) {
         recyclerView = (RecyclerView) view.findViewById(R.id.rv_home_hot);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.slr);

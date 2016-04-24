@@ -1,11 +1,356 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="健康自测"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <RelativeLayout
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_icon1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/exlist_four"/>
+
+            <TextView
+                android:id="@+id/tv_selfrating_item_title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_selfrating_item_icon1"
+                android:text="日常多发病症"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_arrow1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/item_container1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_icon2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/exlist_two"/>
+
+            <TextView
+                android:id="@+id/tv_selfrating_item_title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_selfrating_item_icon2"
+                android:text="女性常见病症"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_arrow2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/item_container2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/item3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_icon3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/exlist_three"/>
+
+            <TextView
+                android:id="@+id/tv_selfrating_item_title3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_selfrating_item_icon3"
+                android:text="男性常见疾病"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_arrow3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/item_container3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/item4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_icon4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/jibing030"/>
+
+            <TextView
+                android:id="@+id/tv_selfrating_item_title4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_selfrating_item_icon4"
+                android:text="儿童常见病"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_arrow4"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/item_container4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/item5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_icon5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/jibing031"/>
+
+            <TextView
+                android:id="@+id/tv_selfrating_item_title5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_selfrating_item_icon5"
+                android:text="脾胃常见病"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_arrow5"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/item_container5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/item6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_icon6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/jibing033"/>
+
+            <TextView
+                android:id="@+id/tv_selfrating_item_title6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_selfrating_item_icon6"
+                android:text="皮肤常见病"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_arrow6"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/item_container6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/item7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_icon7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:layout_centerVertical="true"
+                android:src="@drawable/jibing032"/>
+
+            <TextView
+                android:id="@+id/tv_selfrating_item_title7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_selfrating_item_icon7"
+                android:text="骨科常见病"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_arrow7"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/item_container7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/item8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_icon8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/jibing034"/>
+
+            <TextView
+                android:id="@+id/tv_selfrating_item_title8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_selfrating_item_icon8"
+                android:text="眼科常见病"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_arrow8"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/item_container8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/item9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_icon9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/jibing035"/>
+
+            <TextView
+                android:id="@+id/tv_selfrating_item_title9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_selfrating_item_icon9"
+                android:text="泌尿科常见病"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selfrating_item_arrow9"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/item_container9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

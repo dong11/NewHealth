@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="10dp"
+              tools:context="com.dong.huang.healthapp.fragments.DrugsQueryFragment">
+
+        <ImageView
+            android:id="@+id/iv_query_drugs_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/s_bianmi"/>
+
+        <LinearLayout
+            android:id="@+id/llayout_query_drugs"
+            android:layout_toRightOf="@id/iv_query_drugs_icon"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_drugs_sort_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tv_drugs_sort_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrows_down"
+            />
+
+</RelativeLayout>

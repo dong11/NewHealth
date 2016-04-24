@@ -16,7 +16,6 @@ public class ShareGridViewAdapter extends AutoRVAdapter {
 
     private List<ShareBean> list;
 
-
     public ShareGridViewAdapter(Context context, List<ShareBean> list) {
         super(context, list);
         this.list = list;

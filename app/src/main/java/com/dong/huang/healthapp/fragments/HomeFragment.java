@@ -17,7 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A simple {@link Fragment} subclass.
+ * @author dong {hwongrex@gmail.com}
+ * @date 16/4/22
+ * @time 下午11:25
  * 首页资讯页面
  */
 public class HomeFragment extends Fragment {
@@ -51,11 +53,12 @@ public class HomeFragment extends Fragment {
         fragments = new ArrayList<>();
 
         tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
-        tabLayout.setTabMode(TabLayout.MODE_FIXED);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 
         fragments.add(new HotHomeFragment());
         fragments.add(new OneImageFragment());
         fragments.add(new SubjectFragment());
+        fragments.add(new TruthFragment());
         fragments.add(new NutritionFragment());
 //        fragments.add(new SelfRatingFragment());
 //        fragments.add(new SelfRatingFragment());
@@ -64,6 +67,7 @@ public class HomeFragment extends Fragment {
         titles.add("热门");
         titles.add("一图读懂");
         titles.add("专题");
+        titles.add("真相");
         titles.add("营养");
 //        titles.add("碎片3");
 //        titles.add("碎片4");
@@ -72,7 +76,7 @@ public class HomeFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(1)));
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(2)));
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(3)));
-//        tabLayout.addTab(tabLayout.newTab().setText(titles.get(4)));
+        tabLayout.addTab(tabLayout.newTab().setText(titles.get(4)));
 //        tabLayout.addTab(tabLayout.newTab().setText(titles.get(5)));
 
         adapter = new FragmentAdapter(getChildFragmentManager(),fragments,titles);

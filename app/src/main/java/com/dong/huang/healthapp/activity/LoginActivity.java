@@ -3,6 +3,7 @@ package com.dong.huang.healthapp.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
@@ -107,8 +108,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
             }
             break;
             case R.id.stv_login: {
-//                Toast.makeText(LoginActivity.this, "还未开放,敬请等待！", Toast.LENGTH_SHORT).show();
-                login();
+                Toast.makeText(LoginActivity.this, "还未开放,敬请等待！", Toast.LENGTH_SHORT).show();
+//                login();
             }
             break;
             case R.id.simg_avatarMan: {
@@ -119,7 +120,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     }
 
     private void login(){
-
         mShareAPI = UMShareAPI.get(this);
         SHARE_MEDIA platform = SHARE_MEDIA.SINA;
         mShareAPI.doOauthVerify(this, platform, new UMAuthListener() {

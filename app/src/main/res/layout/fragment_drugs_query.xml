@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dong.huang.healthapp.fragments.DrugsQueryFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llayout_scan_drugs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/s_bianmi"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="18sp"
+            android:text="扫描药品条形码"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrows_down"
+            android:layout_marginRight="5dp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f0f0f0"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_query_drugs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

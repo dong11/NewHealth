@@ -5,6 +5,7 @@
     <string name="open_drawer">open_drawer</string>
     <string name="menu_home_str">首页资讯</string>
     <string name="menu_zice_str">健康自测</string>
+    <string name="menu_drugs_str">药品查询</string>
     <string name="menu_store_str">附近药店</string>
     <string name="menu_footprint_str">每日足迹</string>
     <string name="menu_login_str">点击登录</string>

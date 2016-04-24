@@ -9,14 +9,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.dong.huang.healthapp.R;
 import com.dong.huang.healthapp.base.BaseActivity;
+import com.dong.huang.healthapp.fragments.DrugsQueryFragment;
 import com.dong.huang.healthapp.fragments.FootPrintFragment;
 import com.dong.huang.healthapp.fragments.HomeFragment;
 import com.dong.huang.healthapp.fragments.SelfRatingFragment;
@@ -123,6 +122,7 @@ public class MainActivity extends BaseActivity {
 
         mFragments.put(getString(R.string.menu_home_str), new HomeFragment());
         mFragments.put(getString(R.string.menu_zice_str), new SelfRatingFragment());
+        mFragments.put(getString(R.string.menu_drugs_str), new DrugsQueryFragment());
         mFragments.put(getString(R.string.menu_store_str), new StoreFragment());
         mFragments.put(getString(R.string.menu_footprint_str), new FootPrintFragment());
 

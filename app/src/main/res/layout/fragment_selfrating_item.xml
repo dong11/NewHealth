@@ -1,0 +1,43 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_selfrating_item_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_selfrating_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/iv_selfrating_item_icon"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/iv_selfrating_item_arrow"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_selfrating_disease"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0"/>
+
+</LinearLayout>
