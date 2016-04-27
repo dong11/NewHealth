@@ -36,7 +36,6 @@ public class BaseApplication extends Application implements AMapLocationListener
         initLocation();
     }
 
-
     public void initLocation(){
         //初始化定位
         mLocationClient = new AMapLocationClient(getApplicationContext());

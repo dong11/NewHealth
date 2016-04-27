@@ -1,9 +1,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@android:color/white">
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@android:color/white"
+             android:orientation="vertical">
 
     <com.amap.api.maps2d.MapView
         android:id="@+id/mapView"
@@ -14,67 +14,67 @@
         android:id="@+id/near_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
         android:background="#ddf0f0f0"
+        android:visibility="gone"
         />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="bottom|end">
+        android:layout_gravity="bottom|end"
+        android:orientation="vertical">
 
-    <!-- 圆形悬浮按钮 -->
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/map_fab_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginLeft="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email"
-        app:backgroundTint="@color/color_title_bar"
-        app:borderWidth="0dp"
-        app:fabSize="normal"
-        android:visibility="gone"/>
+        <!-- 圆形悬浮按钮 -->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/map_fab_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:src="@drawable/map"
+            android:visibility="gone"
+            app:backgroundTint="@color/color_title_bar"
+            app:borderWidth="0dp"
+            app:fabSize="mini"/>
 
         <!-- 圆形悬浮按钮 -->
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/map_fab_refresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/fab_margin"
             android:layout_marginLeft="@dimen/fab_margin"
-            android:src="@android:drawable/ic_dialog_email"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:src="@drawable/refresh"
+            android:visibility="gone"
             app:backgroundTint="@color/color_title_bar"
             app:borderWidth="0dp"
-            app:fabSize="normal"
-            android:visibility="gone"/>
+            app:fabSize="mini"/>
 
         <!-- 圆形悬浮按钮 -->
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/map_fab_share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/fab_margin"
             android:layout_marginLeft="@dimen/fab_margin"
-            android:src="@android:drawable/ic_dialog_email"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:src="@drawable/share"
+            android:visibility="gone"
             app:backgroundTint="@color/color_title_bar"
             app:borderWidth="0dp"
-            app:fabSize="normal"
-            android:visibility="gone"/>
+            app:fabSize="mini"/>
 
-    <!-- 圆形悬浮按钮 -->
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/map_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginLeft="@dimen/fab_margin"
-        android:layout_marginBottom="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email"
-        app:backgroundTint="@color/color_title_bar"
-        app:borderWidth="0dp"
-        app:fabSize="normal"/>
+        <!-- 圆形悬浮按钮 -->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/map_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:src="@drawable/ic_action_new"
+            app:backgroundTint="@color/color_title_bar"
+            app:borderWidth="0dp"
+            app:fabSize="mini"/>
 
     </LinearLayout>
 

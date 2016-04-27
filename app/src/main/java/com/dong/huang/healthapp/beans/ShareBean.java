@@ -9,6 +9,7 @@ import android.os.Parcelable;
 public class ShareBean implements Parcelable {
     private String name;
     private int imgRes;
+    private int id;
 
     public ShareBean() {
     }
@@ -34,11 +35,26 @@ public class ShareBean implements Parcelable {
         this.imgRes = imgRes;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public ShareBean(String name, int imgRes, int id) {
+        this.name = name;
+        this.imgRes = imgRes;
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "ShareBean{" +
                 "name='" + name + '\'' +
                 ", imgRes=" + imgRes +
+                ", id=" + id +
                 '}';
     }
 
@@ -52,11 +68,13 @@ public class ShareBean implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.name);
         dest.writeInt(this.imgRes);
+        dest.writeInt(this.id);
     }
 
     protected ShareBean(Parcel in) {
         this.name = in.readString();
         this.imgRes = in.readInt();
+        this.id = in.readInt();
     }
 
     public static final Parcelable.Creator<ShareBean> CREATOR = new Parcelable.Creator<ShareBean>() {

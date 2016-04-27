@@ -76,7 +76,6 @@ public class StoreFragment extends Fragment implements PoiSearch.OnPoiSearchList
         fabMapRefresh = (FloatingActionButton) view.findViewById(R.id.map_fab_refresh);
         fabMapShare = (FloatingActionButton) view.findViewById(R.id.map_fab_share);
 
-
         mMap = mMapView.getMap();
         mMap.getUiSettings().setZoomControlsEnabled(false);
 
@@ -118,13 +117,7 @@ public class StoreFragment extends Fragment implements PoiSearch.OnPoiSearchList
         Marker marker = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(BaseApplication.lat, BaseApplication.lon))
                 .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory
-                        .decodeResource(getResources(), R.drawable.marker)))
-                .draggable(true));
-
-        Marker marker1 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(BaseApplication.lat, BaseApplication.lon))
-                .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory
-                        .decodeResource(getResources(), R.drawable.marker)))
+                        .decodeResource(getResources(), R.drawable.poi_marker_pressed)))
                 .draggable(true));
     }
 
@@ -190,8 +183,10 @@ public class StoreFragment extends Fragment implements PoiSearch.OnPoiSearchList
                         fabMapRefresh.setVisibility(View.VISIBLE);
                         fabMapShare.setVisibility(View.VISIBLE);
                     }
+                    fabMap.setImageResource(R.drawable.ic_action_cancel);
                 } else {
                     flag = false;
+                    fabMap.setImageResource(R.drawable.ic_action_new);
                 }
                 setAnimation(flag, fabMapList, fabMap.getTop(), 300);
                 setAnimation(flag, fabMapRefresh, fabMap.getTop(), 300);
@@ -207,9 +202,19 @@ public class StoreFragment extends Fragment implements PoiSearch.OnPoiSearchList
                     flagList = false;
                 }
                 setAnimation(flagList, mRecyclerView, ScreenUtils.getScreenHeight(getActivity()), 500);
+                setAnimation(false, fabMapList, fabMap.getTop(), 300);
+                setAnimation(false, fabMapRefresh, fabMap.getTop(), 300);
+                setAnimation(false, fabMapShare, fabMap.getTop(), 300);
+                flag = false;
+                fabMap.setImageResource(R.drawable.ic_action_new);
                 break;
             case R.id.map_fab_refresh:
                 initData();
+                setAnimation(false, fabMapList, fabMap.getTop(), 300);
+                setAnimation(false, fabMapRefresh, fabMap.getTop(), 300);
+                setAnimation(false, fabMapShare, fabMap.getTop(), 300);
+                flag = false;
+                fabMap.setImageResource(R.drawable.ic_action_new);
                 break;
             case R.id.map_fab_share:
                 break;

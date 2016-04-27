@@ -48,7 +48,6 @@ public class RetrofitSingleton {
                                          .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                                          .build();
 
-
         apiService = retrofit.create(ApiInterface.class);
     }
 

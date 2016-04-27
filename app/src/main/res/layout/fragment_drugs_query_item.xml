@@ -11,7 +11,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/s_bianmi"/>
+            android:src="@drawable/search_drugs"/>
 
         <LinearLayout
             android:id="@+id/llayout_query_drugs"
@@ -43,7 +43,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginLeft="10dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/arrows_down"
+            android:src="@drawable/icon_lower"
             />
 
 </RelativeLayout>

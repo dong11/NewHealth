@@ -60,8 +60,7 @@ public class HomeFragment extends Fragment {
         fragments.add(new SubjectFragment());
         fragments.add(new TruthFragment());
         fragments.add(new NutritionFragment());
-//        fragments.add(new SelfRatingFragment());
-//        fragments.add(new SelfRatingFragment());
+        fragments.add(new ChronicDiseaseFragment());
 
         titles = new ArrayList<>();
         titles.add("热门");
@@ -69,15 +68,14 @@ public class HomeFragment extends Fragment {
         titles.add("专题");
         titles.add("真相");
         titles.add("营养");
-//        titles.add("碎片3");
-//        titles.add("碎片4");
+        titles.add("慢病");
 
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(0)));
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(1)));
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(2)));
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(3)));
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(4)));
-//        tabLayout.addTab(tabLayout.newTab().setText(titles.get(5)));
+        tabLayout.addTab(tabLayout.newTab().setText(titles.get(5)));
 
         adapter = new FragmentAdapter(getChildFragmentManager(),fragments,titles);
         viewPager.setAdapter(adapter);

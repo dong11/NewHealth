@@ -6,6 +6,6 @@
         android:id="@+id/action_share"
         android:title="@string/action_settings"
         android:orderInCategory="100"
-        android:icon="@drawable/icon_back"
+        android:icon="@drawable/share"
         app:showAsAction="always" />
 </menu>

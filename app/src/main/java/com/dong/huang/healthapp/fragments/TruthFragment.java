@@ -44,7 +44,7 @@ public class TruthFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home_hot, container, false);
+        return inflater.inflate(R.layout.fragment_home_base, container, false);
     }
 
     @Override
@@ -56,7 +56,7 @@ public class TruthFragment extends Fragment {
     }
 
     private void initView(View view){
-        recyclerView = (RecyclerView) view.findViewById(R.id.rv_home_hot);
+        recyclerView = (RecyclerView) view.findViewById(R.id.rv_home_base);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.slr);
 

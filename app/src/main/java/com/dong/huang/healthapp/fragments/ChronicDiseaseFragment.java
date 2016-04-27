@@ -14,9 +14,9 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.dong.huang.healthapp.R;
-import com.dong.huang.healthapp.activity.SubjectActivity;
-import com.dong.huang.healthapp.adapters.RecyclerSubjectAdapter;
-import com.dong.huang.healthapp.beans.homebean.SubjectInfo;
+import com.dong.huang.healthapp.activity.OneImageActivity;
+import com.dong.huang.healthapp.adapters.RecyclerOneAdapter;
+import com.dong.huang.healthapp.beans.homebean.OneImageInfo;
 import com.dong.huang.healthapp.component.ApiInterface;
 import com.dong.huang.healthapp.component.RetrofitSingleton;
 
@@ -30,15 +30,15 @@ import rx.schedulers.Schedulers;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SubjectFragment extends Fragment {
+public class ChronicDiseaseFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private SwipeRefreshLayout swipeRefreshLayout;
     private boolean isRefresh = true;
-    private List<SubjectInfo.DataBean.ItemsBean> datas;
-    private RecyclerSubjectAdapter adapter;
+    private List<OneImageInfo.DataBean.ItemsBean> datas;
+    private RecyclerOneAdapter adapter;
 
-    public SubjectFragment() {
+    public ChronicDiseaseFragment() {
     }
 
     @Override
@@ -80,11 +80,12 @@ public class SubjectFragment extends Fragment {
 
     private void initData(){
         datas = new ArrayList<>();
-        adapter = new RecyclerSubjectAdapter(getActivity(), datas);
+        adapter = new RecyclerOneAdapter(getActivity(), datas);
         adapter.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), SubjectActivity.class);
+                Intent intent = new Intent(getActivity(), OneImageActivity.class);
+                intent.putExtra("title", datas.get(position).getTitle());
                 intent.putExtra("id", datas.get(position).getId());
                 startActivity(intent);
             }
@@ -95,10 +96,10 @@ public class SubjectFragment extends Fragment {
     private void loadMore(){
 
         RetrofitSingleton.getApiService(getActivity(), ApiInterface.URL_HOME_IMAGE)
-                .getSubjectInfo("1","d5424fa6-adff-4b0a-8917-4264daf4a348","10")
+                .getOneImageInfo("1","d5424fa6-adff-4b0a-8917-4264daf4a348","10","10")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<SubjectInfo>() {
+                .subscribe(new Subscriber<OneImageInfo>() {
                     @Override
                     public void onCompleted() {
 
@@ -111,11 +112,12 @@ public class SubjectFragment extends Fragment {
                     }
 
                     @Override
-                    public void onNext(SubjectInfo subjectInfo) {
-                        datas.addAll(subjectInfo.getData().getItems());
+                    public void onNext(OneImageInfo oneImageInfo) {
+                        datas.addAll(oneImageInfo.getData().getItems());
                         adapter.notifyDataSetChanged();
                         swipeRefreshLayout.setRefreshing(false);
                     }
                 });
     }
+
 }

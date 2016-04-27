@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.dong.huang.healthapp.R;
@@ -50,13 +51,19 @@ public class DrugsQueryFragment extends Fragment {
         mBeans = new ArrayList<>();
 
         mAdapter = new RVDrugsSortAdapter(getActivity(), mBeans);
+        mAdapter.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                
+            }
+        });
         mRecyclerView.setAdapter(mAdapter);
 
         initData();
     }
 
     public void initData(){
-        RetrofitSingleton.getApiService(getActivity(), ApiInterface.URL_HOME_IMAGE)
+        RetrofitSingleton.getApiService(getActivity(), ApiInterface.URL_HOME_SUB)
                 .getDrugsSortBean("d5424fa6-adff-4b0a-8917-4264daf4a348")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

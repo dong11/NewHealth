@@ -30,10 +30,12 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by dong on 16/2/14.
+ * @author dong {hwongrex@gmail.com}
+ * @date 16/4/28
+ * @time 上午12:09
  */
-public class HotHomeFragment extends Fragment {
 
+public class BaseHomeFragment extends Fragment{
     private SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView lvHotData;
     private RecyclerHotAdapter adapter;
@@ -161,36 +163,36 @@ public class HotHomeFragment extends Fragment {
             }
 
             RetrofitSingleton.getApiService(getActivity().getApplicationContext(), ApiInterface.URL_HOME_HOT)
-                                .getHomeInfo(String.valueOf(10), String.valueOf(currentPage))
-                                .subscribeOn(Schedulers.io())
-                                .observeOn(AndroidSchedulers.mainThread())
-                                .subscribe(new Subscriber<HotInfo>() {
-                                    @Override
-                                    public void onCompleted() {
+                    .getHomeInfo(String.valueOf(10), String.valueOf(currentPage))
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(new Subscriber<HotInfo>() {
+                        @Override
+                        public void onCompleted() {
 
-                                    }
+                        }
 
-                                    @Override
-                                    public void onError(Throwable e) {
-                                        swipeRefreshLayout.setRefreshing(false);
-                                        Toast.makeText(getActivity(), "网络异常,请稍后再试", Toast.LENGTH_SHORT).show();
-                                    }
+                        @Override
+                        public void onError(Throwable e) {
+                            swipeRefreshLayout.setRefreshing(false);
+                            Toast.makeText(getActivity(), "网络异常,请稍后再试", Toast.LENGTH_SHORT).show();
+                        }
 
-                                    @Override
-                                    public void onNext(HotInfo hotInfo) {
-                                        isCanAddPage = true;
-                                        totalItem = hotInfo.getTotalCount();
-                                        swipeRefreshLayout.setRefreshing(false);
-                                        if(isRefresh){
-                                            hotDatas.clear();
-                                            isRefresh = false;
-                                            LiteOrmDBUtil.deleteAll(HotData.class);
-                                            LiteOrmDBUtil.insertAll(hotInfo.getList());
-                                        }
-                                        hotDatas.addAll(hotInfo.getList());
-                                        adapter.notifyDataSetChanged();
-                                    }
-                                });
+                        @Override
+                        public void onNext(HotInfo hotInfo) {
+                            isCanAddPage = true;
+                            totalItem = hotInfo.getTotalCount();
+                            swipeRefreshLayout.setRefreshing(false);
+                            if(isRefresh){
+                                hotDatas.clear();
+                                isRefresh = false;
+                                LiteOrmDBUtil.deleteAll(HotData.class);
+                                LiteOrmDBUtil.insertAll(hotInfo.getList());
+                            }
+                            hotDatas.addAll(hotInfo.getList());
+                            adapter.notifyDataSetChanged();
+                        }
+                    });
         }
     }
 }

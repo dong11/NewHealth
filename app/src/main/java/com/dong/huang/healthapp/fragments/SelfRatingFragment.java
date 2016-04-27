@@ -152,54 +152,54 @@ public class SelfRatingFragment extends Fragment implements View.OnClickListener
         mBeans8 = new ArrayList<>();
         mBeans9 = new ArrayList<>();
 
-        mBeans1.add(new ShareBean("感冒", R.drawable.s_ganmao));
-        mBeans1.add(new ShareBean("失眠", R.drawable.s_sm));
-        mBeans1.add(new ShareBean("便秘", R.drawable.s_bianmi));
-        mBeans1.add(new ShareBean("咳嗽", R.drawable.s_kesou));
-        mBeans1.add(new ShareBean("胃肠不适", R.drawable.s_weiyan));
-        mBeans1.add(new ShareBean("腹泻", R.drawable.s_fuxie));
-        mBeans1.add(new ShareBean("痔疮", R.drawable.jibing469));
-        mBeans1.add(new ShareBean("鼻炎", R.drawable.jibing300));
-        mBeans1.add(new ShareBean("头痛", R.drawable.jibing381));
-        mBeans1.add(new ShareBean("咽炎", R.drawable.jibing298));
-        mBeans1.add(new ShareBean("口腔溃疡", R.drawable.jibing372));
-        mBeans1.add(new ShareBean("缺铁性贫血", R.drawable.jibing510));
-        mBeans1.add(new ShareBean("痤疮", R.drawable.jibing343));
-        mBeans1.add(new ShareBean("扁桃体炎", R.drawable.jibing303));
-        mBeans1.add(new ShareBean("牙痛", R.drawable.jibing447));
+        mBeans1.add(new ShareBean("感冒", R.drawable.s_ganmao, 22));
+        mBeans1.add(new ShareBean("失眠", R.drawable.s_sm, 724));
+        mBeans1.add(new ShareBean("便秘", R.drawable.s_bianmi, 205));
+        mBeans1.add(new ShareBean("咳嗽", R.drawable.s_kesou, 742));
+        mBeans1.add(new ShareBean("胃肠不适", R.drawable.s_weiyan, 182));
+        mBeans1.add(new ShareBean("腹泻", R.drawable.s_fuxie, 165));
+        mBeans1.add(new ShareBean("痔疮", R.drawable.jibing469, 469));
+        mBeans1.add(new ShareBean("鼻炎", R.drawable.jibing300, 300));
+        mBeans1.add(new ShareBean("头痛", R.drawable.jibing381, 381));
+        mBeans1.add(new ShareBean("咽炎", R.drawable.jibing298, 298));
+        mBeans1.add(new ShareBean("口腔溃疡", R.drawable.jibing372, 372));
+        mBeans1.add(new ShareBean("缺铁性贫血", R.drawable.jibing510, 510));
+        mBeans1.add(new ShareBean("痤疮", R.drawable.jibing343, 343));
+        mBeans1.add(new ShareBean("扁桃体炎", R.drawable.jibing303, 303));
+        mBeans1.add(new ShareBean("牙痛", R.drawable.jibing447, 447));
 
-        mBeans2.add(new ShareBean("月经不调", R.drawable.yjbt));
-        mBeans2.add(new ShareBean("阴道炎", R.drawable.smbj));
-        mBeans2.add(new ShareBean("更年期综合征", R.drawable.gnq));
-        mBeans2.add(new ShareBean("痛经", R.drawable.tongj));
-        mBeans2.add(new ShareBean("黄褐斑", R.drawable.jibing490));
-        mBeans2.add(new ShareBean("宫颈炎", R.drawable.jibing691));
-        mBeans2.add(new ShareBean("慢性盆腔炎", R.drawable.jibing701));
+        mBeans2.add(new ShareBean("月经不调", R.drawable.yjbt, 231));
+        mBeans2.add(new ShareBean("阴道炎", R.drawable.smbj, 123));
+        mBeans2.add(new ShareBean("更年期综合征", R.drawable.gnq, 230));
+        mBeans2.add(new ShareBean("痛经", R.drawable.tongj, 725));
+        mBeans2.add(new ShareBean("黄褐斑", R.drawable.jibing490, 490));
+        mBeans2.add(new ShareBean("宫颈炎", R.drawable.jibing691, 691));
+        mBeans2.add(new ShareBean("慢性盆腔炎", R.drawable.jibing701, 701));
 
-        mBeans3.add(new ShareBean("补肾益精", R.drawable.xgnbj));
-        mBeans3.add(new ShareBean("前列腺炎", R.drawable.qlxy));
-        mBeans3.add(new ShareBean("脱发", R.drawable.tuofa));
+        mBeans3.add(new ShareBean("补肾益精", R.drawable.xgnbj, 723));
+        mBeans3.add(new ShareBean("前列腺炎", R.drawable.qlxy, 233));
+        mBeans3.add(new ShareBean("脱发", R.drawable.tuofa, 242));
 
-        mBeans4.add(new ShareBean("儿童感冒", R.drawable.jibing610));
-        mBeans4.add(new ShareBean("儿童厌食", R.drawable.jibing629));
-        mBeans4.add(new ShareBean("儿童食积", R.drawable.jibing634));
-        mBeans4.add(new ShareBean("儿童咳喘", R.drawable.jibing671));
+        mBeans4.add(new ShareBean("儿童感冒", R.drawable.jibing610, 610));
+        mBeans4.add(new ShareBean("儿童厌食", R.drawable.jibing629, 629));
+        mBeans4.add(new ShareBean("儿童食积", R.drawable.jibing634, 634));
+        mBeans4.add(new ShareBean("儿童咳喘", R.drawable.jibing671, 671));
 
-        mBeans5.add(new ShareBean("慢性胃炎", R.drawable.jibing635));
-        mBeans5.add(new ShareBean("胃溃疡", R.drawable.jibing652));
+        mBeans5.add(new ShareBean("慢性胃炎", R.drawable.jibing635, 635));
+        mBeans5.add(new ShareBean("胃溃疡", R.drawable.jibing652, 652));
 
-        mBeans6.add(new ShareBean("足癣(脚气)", R.drawable.jibing428));
-        mBeans6.add(new ShareBean("皮炎湿疹", R.drawable.jibing421));
-        mBeans6.add(new ShareBean("荨麻疹", R.drawable.jibing411));
+        mBeans6.add(new ShareBean("足癣(脚气)", R.drawable.jibing428, 428));
+        mBeans6.add(new ShareBean("皮炎湿疹", R.drawable.jibing421, 421));
+        mBeans6.add(new ShareBean("荨麻疹", R.drawable.jibing411, 411));
 
-        mBeans7.add(new ShareBean("腰肌劳损", R.drawable.jibing568));
-        mBeans7.add(new ShareBean("肩周炎", R.drawable.jibing588));
-        mBeans7.add(new ShareBean("颈椎病", R.drawable.jibing597));
+        mBeans7.add(new ShareBean("腰肌劳损", R.drawable.jibing568, 568));
+        mBeans7.add(new ShareBean("肩周炎", R.drawable.jibing588, 588));
+        mBeans7.add(new ShareBean("颈椎病", R.drawable.jibing597, 597));
 
-        mBeans8.add(new ShareBean("视疲劳", R.drawable.jibing546));
-        mBeans8.add(new ShareBean("急性结膜炎", R.drawable.jibing525));
+        mBeans8.add(new ShareBean("视疲劳", R.drawable.jibing546, 546));
+        mBeans8.add(new ShareBean("急性结膜炎", R.drawable.jibing525, 525));
 
-        mBeans9.add(new ShareBean("尿路感染", R.drawable.jibing660));
+        mBeans9.add(new ShareBean("尿路感染", R.drawable.jibing660, 660));
 
         getChildFragmentManager().beginTransaction().add(R.id.item_container1, DiseaseFragment.newInstance(mBeans1), "item1").commit();
   }

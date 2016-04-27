@@ -15,11 +15,8 @@ import android.widget.Toast;
 
 import com.dong.huang.healthapp.R;
 import com.dong.huang.healthapp.activity.OneImageActivity;
-import com.dong.huang.healthapp.activity.SubjectActivity;
 import com.dong.huang.healthapp.adapters.RVNutritionAdapter;
-import com.dong.huang.healthapp.adapters.RecyclerSubjectAdapter;
 import com.dong.huang.healthapp.beans.homebean.NutritionInfo;
-import com.dong.huang.healthapp.beans.homebean.SubjectInfo;
 import com.dong.huang.healthapp.component.ApiInterface;
 import com.dong.huang.healthapp.component.RetrofitSingleton;
 
@@ -48,7 +45,7 @@ public class NutritionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home_hot, container, false);
+        return inflater.inflate(R.layout.fragment_home_base, container, false);
     }
 
     @Override
@@ -60,7 +57,7 @@ public class NutritionFragment extends Fragment {
     }
 
     private void initView(View view) {
-        recyclerView = (RecyclerView) view.findViewById(R.id.rv_home_hot);
+        recyclerView = (RecyclerView) view.findViewById(R.id.rv_home_base);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.slr);
 

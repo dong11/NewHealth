@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/s_bianmi"
+            android:src="@drawable/search_scanning"
             android:layout_marginRight="5dp"/>
 
         <TextView
@@ -30,7 +30,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrows_down"
+            android:src="@drawable/icon_lower"
             android:layout_marginRight="5dp"
             />
 
