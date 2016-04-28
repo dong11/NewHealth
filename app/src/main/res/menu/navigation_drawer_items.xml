@@ -22,7 +22,7 @@
 
         <item
             android:id="@+id/menu_footprint"
-            android:icon="@drawable/menu_store"
+            android:icon="@drawable/ongyaotix2x"
             android:title="@string/menu_footprint_str"/>
     </group>
 

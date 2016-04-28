@@ -102,7 +102,13 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".TestActivity">
         </activity>
-        <activity android:name=".activity.QueryDrugsActivity">
+        <activity
+            android:name=".activity.QueryDrugsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".activity.DrugsInfoActivity">
+        </activity>
+        <activity android:name=".activity.SymptomChoseActivity">
         </activity>
     </application>
 

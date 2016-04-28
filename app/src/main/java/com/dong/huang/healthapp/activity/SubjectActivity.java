@@ -52,8 +52,6 @@ public class SubjectActivity extends BaseActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.subject_recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
     }
 
     private void initData(){

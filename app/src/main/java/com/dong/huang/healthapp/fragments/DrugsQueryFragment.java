@@ -1,6 +1,7 @@
 package com.dong.huang.healthapp.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.dong.huang.healthapp.R;
+import com.dong.huang.healthapp.activity.QueryDrugsActivity;
 import com.dong.huang.healthapp.adapters.RVDrugsSortAdapter;
 import com.dong.huang.healthapp.beans.DrugsSortBean;
 import com.dong.huang.healthapp.component.ApiInterface;
@@ -54,7 +56,10 @@ public class DrugsQueryFragment extends Fragment {
         mAdapter.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                
+                Intent intent = new Intent(getActivity(), QueryDrugsActivity.class);
+                intent.putExtra("tags_str", mBeans.get(position).getTags_str());
+                intent.putExtra("title", mBeans.get(position).getTitle());
+                startActivity(intent);
             }
         });
         mRecyclerView.setAdapter(mAdapter);

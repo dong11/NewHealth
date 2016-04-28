@@ -32,7 +32,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by dong on 16/2/14.
  */
-public class HotHomeFragment extends Fragment {
+public class HotHomeFragment extends BaseHomeFragment {
 
     private SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView lvHotData;
